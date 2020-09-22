@@ -8,8 +8,12 @@ public class Main implements Runnable {
     private boolean running = false;
 
     public void run(){
-        while(running) {
+        int x = 0;
+        while(x < 10000000) {
             running = false; // Stops infinite loop, incase you try to run it at this state
+
+            this.frame.repaint();
+            x++;
         }
         this.frame.Exit();
     }
